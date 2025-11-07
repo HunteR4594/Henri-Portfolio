@@ -1,8 +1,8 @@
 # Reas_Portfolio
-###Hello there! I am John Henri, and this is my portfolio.
+### Hello there! I am John Henri, and this is my portfolio.
 - It contains a little bit of me, my works, and skills. You can also see here my contacts.
 
-#How to run this file locally?
+# How to run this file locally?
 1. **Find the repository URL and copy the URL displayed under the HTTPS tab.**
    <img width="981" height="643" alt="image" src="https://github.com/user-attachments/assets/8d9a91af-e38d-4dfc-b9e0-06897b4e90b4" />
 2. **Open your terminal and navigate a file where you want to store the project**
