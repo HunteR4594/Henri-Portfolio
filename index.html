@@ -629,6 +629,57 @@
                                 <tr
                                     data-bs-toggle="modal"
                                     data-bs-target="#projectGalleryModal"
+                                    data-project-title="Gmail Categorization Automation"
+                                    data-images="assets/gallery/GmailCategorizationAutomation/workflow-canvas.png"
+                                    data-description="A self-hosted n8n workflow that reads incoming Gmail, classifies it into one of six categories using Google Gemini, and applies the matching label automatically, no manual sorting required. A separate backfill process works through an existing inbox in throttled batches, skips anything already labeled by checking Gmail's own label data instead of an external database, and paces requests to stay within the AI provider's free-tier rate limit. A full backfill run against a real, previously unsorted inbox processed 400 messages, skipped 100 already labeled, and correctly classified and labeled the remaining 300 across 30 batches with zero rate-limit errors after the fix."
+                                    data-features="Duplicate detection via existing Gmail labels instead of an external database?Two independent entry points, an instant live trigger and a throttled batch backfill, converging on one shared classification and labeling path?Rate-limit-safe batching: fixed batch size plus a Wait node between batches, after early runs hit Gemini's free-tier limit?Diagnosed a loop-branch timing bug where labeling only reflected the final batch instead of every batch?Diagnosed a cross-loop node-reference bug that caused item pairing to collapse and the same messages to get relabeled repeatedly"
+                                    data-stack="n8n (self-hosted)?Gmail API?Google Gemini API?n8n Expressions (JavaScript)"
+                                    data-role="Solo developer, designed and built the workflow end-to-end in n8n: the live and backfill entry points, the shared Gemini classification/labeling logic, and both loop-execution bug fixes."
+                                    style="cursor: pointer;"
+                                >
+                                    <td>August 2026</td>
+
+                                    <td>Gmail Categorization Automation</td>
+
+                                    <td class="d-none d-md-table-cell">
+                                        <span class="badge bg-secondary">n8n</span>
+                                        <span class="badge bg-danger">Gmail API</span>
+                                        <span class="badge bg-warning text-dark">Gemini API</span>
+                                        <span class="badge bg-info text-dark">JavaScript</span>
+                                    </td>
+
+                                    <td class="d-none d-lg-table-cell">A self-hosted n8n workflow that classifies incoming Gmail into six categories with Google Gemini and auto-labels it, plus a rate-limited backfill process for an existing inbox. Processed 400 messages end-to-end with zero rate-limit errors after fixing two non-obvious n8n loop bugs.</td>
+
+                                </tr>
+                                <tr
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#projectGalleryModal"
+                                    data-project-title="Outreach &amp; Lead Tracking System"
+                                    data-images="assets/gallery/OutreachLeadTracker/workflow-canvas.png"
+                                    data-description="A two-workflow n8n system that tracks my own job applications. One workflow watches Gmail for application-confirmation emails, extracts the company, role, and platform with Google Gemini, and appends a row to a Google Sheet automatically. A second, independent workflow checks that sheet daily, filters for applications whose follow-up window has passed and haven't been followed up yet, and emails me a formatted digest. Built to solve a real, active job search, the two workflows share only a Google Sheet as their data layer and never call each other directly."
+                                    data-features="Structured multi-field AI extraction (company, role, platform) rather than single-label classification?Detection and reminder workflows share a Google Sheet as their only data layer, neither workflow knows the other exists?Follow-up due dates calculated once via a Sheets WORKDAY formula and only ever read, never recomputed, by the workflow?Digest formatting isolated in a dedicated Code node so the Gmail Send node stays simple?Fixed a silent bug where a mapped field overwrote a working WORKDAY formula with plain text?Fixed HTML-vs-Text email formatting that collapsed line breaks, and a schedule trigger firing on the n8n instance's timezone instead of the configured one"
+                                    data-stack="n8n (self-hosted)?Gmail API?Google Gemini API?Google Sheets (WORKDAY formula)?n8n Code node (JavaScript)"
+                                    data-role="Solo developer, designed and built both workflows in n8n, the AI extraction logic, and the shared Sheets data layer, and diagnosed all three platform-behavior bugs during testing."
+                                    style="cursor: pointer;"
+                                >
+                                    <td>August 2026</td>
+
+                                    <td>Outreach &amp; Lead Tracking System</td>
+
+                                    <td class="d-none d-md-table-cell">
+                                        <span class="badge bg-secondary">n8n</span>
+                                        <span class="badge bg-danger">Gmail API</span>
+                                        <span class="badge bg-warning text-dark">Gemini API</span>
+                                        <span class="badge bg-success">Google Sheets</span>
+                                        <span class="badge bg-info text-dark">JavaScript</span>
+                                    </td>
+
+                                    <td class="d-none d-lg-table-cell">A two-workflow n8n system that logs new job applications from Gmail via Gemini extraction into a Google Sheet, then emails a daily digest of overdue follow-ups. The two workflows share only the sheet as a data layer and never call each other directly.</td>
+
+                                </tr>
+                                <tr
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#projectGalleryModal"
                                     data-project-title="Diarago"
                                     data-images="assets/gallery/diarago/01-onboarding-welcome.jpg, assets/gallery/diarago/02-choose-dragon.jpg, assets/gallery/diarago/03-dragon-hatched.jpg, assets/gallery/diarago/04-dashboard.jpg, assets/gallery/diarago/05-pet-screen.jpg, assets/gallery/diarago/06-talk-companion.jpg, assets/gallery/diarago/07-journal-entry.jpg, assets/gallery/diarago/08-pomodoro-setup.jpg, assets/gallery/diarago/09-pomodoro-focus.jpg, assets/gallery/diarago/10-achievements.jpg, assets/gallery/diarago/11-shop.jpg"
                                     data-description="Diarago is a Flutter and Supabase productivity journal that turns habit-tracking into a game. A dragon companion, animated with a custom-painted widget and mapped to detected emotions, reacts to how the user is feeling and evolves as they build consistency. The app runs a layered AI system, paired with a full analytics and rewards loop to keep users coming back."
