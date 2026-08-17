@@ -40,6 +40,8 @@ Henri-Portfolio/
 │   ├── *.mp4 / *.webm      # Background videos for About / Skills / Projects sections
 │   ├── 2.png, 3.png        # Decorative parallax spheres
 │   └── gallery/            # Per-project screenshot folders, one per Projects-table row
+│       ├── GmailCategorizationAutomation/
+│       ├── OutreachLeadTracker/
 │       ├── LostandFound/
 │       ├── POS/
 │       ├── TimePaws/
